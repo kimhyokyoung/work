@@ -1,0 +1,170 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { font-family: 'NanumSquareRound'; }
+button { font-family: 'NanumSquareRound'; }
+input { font-family: 'NanumSquareRound'; }
+* {
+    padding :0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ol,ul,li  {
+    list-style: none;
+    float:left;
+}
+
+body {
+    width: 100%;
+    display: flex;
+}
+
+.container {
+    width: 800px;
+    height: 700px;
+    background-color: #ffe8f7;
+    margin: 0 auto;
+
+}
+
+header {
+    width : 100%;
+    min-width: 800px;
+    height: 120px;
+    flex-direction: column;
+}
+
+.header--date {
+    width: 800px;
+    height: 70px;
+    text-align: center;
+    line-height: 110px;
+    font-size: normal;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+.header--title {
+    width: 800px;
+    height: 50px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+main {
+    width: 100%;
+    min-width: 800px;
+    height: 550px;
+}
+
+.main--textbox {
+    width: 800px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main--textInput {
+    width: 600px;
+    height: 50px;
+    background-color: white;
+    border: 0;
+    margin-left: 30px;
+    padding-left : 10px;
+    padding-right : 10px;
+}
+
+.main--button__add {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 3px 3px gray;
+} 
+
+.main--list {
+    width: 800px;
+    height: 470px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main--listbox {
+    width: 800px;
+    height: 470px;
+    padding: 30px 50px; /*안쪽여백*/
+    background-color: #ffe8f7;
+}
+
+li{
+    width: 700px; 
+    height: 40px;
+    margin-bottom: 5px;
+    line-height: 40px;    
+    list-style: none;
+    float: left;
+    display: flex;
+}
+
+
+.comButton {
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-right: 16px;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.delButton {
+    width: 70px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+    box-shadow: 3px 3px gray;  
+
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.ing {
+    text-decoration: none;
+}
+
+.clock {
+    font-weight: 600;
+    margin: 0 auto;
+}
