@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="to-do.css" />
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header--date" id="calendar"></div>
+            <div class="header--title">TO DO LIST</div>
+        </header>
+
+        <main>
+            <div class="main--textbox">
+                <div><input class="main--textInput" type="text" id="inputField" /></div>
+                <div><button class="main--button__add" id="addToDo">add</button></div>
+            </div>
+            <div class="main--list">
+                <div class="main--listbox" id="toDoList">
+                    <ul id="toDoListUl"></ul>
+                </div>
+                <div id="time" class="clock">시계</div>
+            </div>
+        </main>
+    </div>
+
+    <script src="to-do.js"></script>
+</body>
+
+</html>
