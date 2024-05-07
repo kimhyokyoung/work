@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>덧셈게임_ver1</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="number"></div>
+            <input type="text" id="inputValue">
+            <button id="submit">제출</button>
+        </div>
+
+
+        <script>
+            var rn = [];
+            let answer = 0;
+            let text ='';
+
+            const submit = document.getElementById('submit');
+            const input = document.getElementById('inputValue');
+
+
+            function randomNumber() {
+                for(let i =0; i<2; i++){                    
+                    rn[i] = Math.floor(Math.random() * 99)+1;
+                    answer += rn[i] ;
+                }
+
+                text += `${rn[0]} + ${rn[1]} = ?`;
+                document.getElementById("number").innerHTML = text;
+                console.log(`${rn[0]}+${rn[1]}=${answer}`);
+            }
+
+            randomNumber();
+
+
+
+            submit.addEventListener('click', function (event) {
+                if(input.value == answer) {
+                    alert('정답');
+                } else {
+                    alert('오답');
+                }
+            })
+        </script>
+    </body>
+</html>
