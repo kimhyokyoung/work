@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>덧셈게임_ver2</title>
+</head>
+<body>
+    <div id="container">
+        <div id="number"></div>
+
+        <button id="submit">제출</button>
+    </div>
+
+    <script>
+        var rn = new Array(10); //배열 선언
+        for (var a=0; a<rn.length; a++) {
+            rn[a] = new Array(2);
+        } //=> rn[10][2] 생성
+
+        var sum = []; //기존 : 변수 -> 배열로 변경함 0~9 필요
+        let text ='';
+        var answer = 0;
+        var userAnswer = [];
+
+        const submit = document.getElementById('submit');
+
+
+        function randomNumber() {
+                for(let i =0; i<10; i++){
+                    for(let j =0; j<2; j++){
+                        rn[i][j] = Math.floor(Math.random() * 99)+1;
+
+                        sum[i] = rn[i][j];
+                        // console.log(`${sum[i]}`);
+                        answer += sum[i];
+                        // c
+                        console.log(answer);
+                }
+                console.log(`${rn[i][0]} + ${rn[i][1]} = ${answer}`);
+                userAnswer[i] = answer; //답을 옮긴 후 answer 초기화
+                answer=0; //값 초기화
+                
+                text += `<h4> ${i+1}번.  ${rn[i][0]} + ${rn[i][1]} = <input type="text" class="inputValue"><span class="ox">        정답여부</<span></h4>`;
+                document.getElementById("number").innerHTML = text;
+                }
+            }
+
+            randomNumber();
+
+            
+
+        submit.addEventListener('click', function (event) {
+            console.log(submit); //버튼 작용 확인
+            const input = document.querySelectorAll('.inputValue');
+            const ox = document.querySelectorAll('.ox');
+            
+                for(var k =0; k<input.length; k++) {
+                    console.log(input[k].value); //text박스에 입력된 값 확인
+                    console.log(ox[k]); //정답여부 확인 => 정답 or 오답으로 변경
+
+                    if(input[k].value == userAnswer[k]) {
+                        ox[k].innerText = "정답";
+                        ox[k].style.color = "blue";
+
+                    } else {
+                        ox[k].innerText = "오답";
+                        ox[k].style.color = "red";
+                    }
+                }
+                
+            })
+
+    </script>
+</body>
+</html>
