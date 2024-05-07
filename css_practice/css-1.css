@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+*{padding: 0; margin:0;} /*전체 영역 여백 0*/
+
+a {
+    color : black;
+    text-decoration: none; /*밑줄제거*/
+}
+
+ul {
+    list-style: none; /*●표시 삭제*/
+}
+
+.menu_bar > ul { /*목록 가운데 정렬*/
+    margin-left: 750px;
+    position: relative;
+}
+
+.menu_bar {
+    width : 100%;
+    min-width: 1280px;
+    height: 50px; border-bottom: 1px solid #ccc;
+    background-color: lightgray;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    margin-bottom :60px;
+    z-index: 400;
+}
+
+.menu2 {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    min-width: 1280px;
+    height: 300px;
+    border: 1px solid #ccc;
+    position: relative;
+    font-size: 20px;
+    background-color: white; opacity: 0.6;
+    display: none;
+    z-index: 222;
+}
+
+nav > ul > li > a {
+    color : rgb(23, 187, 252);
+    text-decoration: none;
+}
+
+nav > div > a,p {
+    color : black;
+    font-weight: 600;
+}
+
+.menu_bar:hover ~.menu2{ 
+    display: block;
+}
+
+.menu2:hover {
+    display: block;
+}
+
+.a1 {
+    position: absolute;
+    top : 10px;
+    left : 790px;
+}
+
+.a2 {
+    position: absolute;
+    top : 50px;
+    left: 800px;
+}
+
+.b1 {
+    position: absolute;
+    top : 10px;
+    left : 915px;
+}
+
+.b2 {
+    position: absolute;
+    top : 50px;
+    left : 915px;
+}
+
+.b3 {
+    position: absolute;
+    top : 90px;
+    left : 915px;
+}
+
+.c1 {
+    position: absolute;
+    top : 10px;
+    left : 1055px;
+}
+
+.c2 {
+    position: absolute;
+    top : 50px;
+    left: 1055px;
+}
+.menu_bar > ul >li { /*왼쪽 정렬 및 간격 조정*/
+    float: left;
+    width: 140px;
+
+}
+
+header {
+    width : 100%;
+    min-width: 1280px;
+    height: 50px; 
+    margin-bottom: 40px;
+    top:0;
+    left: 0;
+    right :0;
+}
+
+main {
+    width: 100%;
+    min-width: 1280px;
+    height: 600px; 
+    position: relative;
+}
+
+.inner_wrap {
+    width: 1280px;
+    height: 550px;
+    margin: 0 auto;
+    position : relative;
+    border: 1px solid #ccc;
+}
+
+.address {
+    height: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contents
+{
+    width : 1280px;
+    margin : 0 auto;
+}
+
+.section01 {
+    height: 350px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section02 {
+    height: 150px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.section03 {
+    height: 260px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section04 {
+    height: 300px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.blue  {
+    width: 150px;
+    height: 360px;
+    background-color: skyblue;
+    position: absolute;
+    z-index: 5;
+    top : 30px;
+    left: 30px;
+}
+
+.yellow {
+    width: 300px;
+    height: 130px;
+    background-color: yellow;
+    position: absolute;
+    z-index: 1;
+    left : 100px;
+    top : 300px;
+}
+
+.red {
+    width: 130px;
+    height: 130px;
+    background-color: rgb(233, 83, 83);
+    position: absolute;
+    z-index: 7;
+    top : 30px;
+    right : 100px;
+}
+
+.section_h {
+    width: 1280px;
+    height: 45px;
+    margin : 0 auto;
+}
+
+.section_h > p {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.div1 {
+    width: 610px;
+    height: 350px;
+    background-color: lightgray;
+    text-align: center;
+    line-height: 350px;
+}
+
+.div2 {
+    width: 610px;
+    height: 350px;
+    background-color: lightgray;
+    text-align: center;
+    line-height: 350px;
+}
+
+.div3 {
+    flex-grow: 1;
+    background-color: rgb(230, 230, 230);
+}
+.div4 {
+    flex-grow: 2;
+    background-color: rgb(175, 175, 175);
+}
+.div5 {
+    flex-grow: 1;
+    background-color: rgb(109, 109, 109);
+}
+.div6 {
+    flex-grow: 1;
+    background-color: rgb(75, 75, 75);
+}
+.div7 {
+    flex-grow: 1;
+    background-color: rgb(29, 29, 29);
+}
+.div8 {
+    flex-grow: 1;
+    background-color: rgb(7, 7, 7);
+}
+
+.div9 {
+    width: 300px;
+    height: 130px;
+    background-color: lightgray ;
+}
+
+.div10 {
+    width: 300px;
+    height: 130px;
+    background-color: gray;
+}
+
+.div11 {
+    background-color: rgb(172, 172, 172);
+}
+
+.div12 {
+    background-color: rgb(61, 61, 61);
+}
+
+.div13 {
+    background-color: black;
+}
+
+.div14{
+    background-color: #cccccc;
+}
