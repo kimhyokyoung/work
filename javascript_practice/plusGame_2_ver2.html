@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>덧셈게임_ver2(수정)</title>
+    <style>
+        .quesition_O {
+            color: blue;
+        }
+
+        .quesition_X {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="width: 380px;">
+        <div id="quesition"></div>
+        <button id="reset">다시하기</button>
+        <h3 id="result" style="display: inline; margin-left: 10px;"></h3><button id="submit"
+            style="float: right">제출</button>
+    </div>
+
+    <script>
+        const arr = [];
+        let text = '';
+        let result = '';
+
+        makeQuizs();
+        console.log(arr);
+        creteQuizEL();
+        submit.addEventListener('click', function (event) {
+            console.log(submit);
+            checkAnswer();
+        })
+        reset.addEventListener('click', function (event) {
+            console.log(reset);
+            location.reload(true);
+        })
+
+
+        function randomNumberCreate() {
+            return Math.floor(Math.random() * 99) + 1;
+        }
+
+        function makeQuizs() {
+            for (let i = 0; i < 10; i++) { //여긴 수정x
+                let num1 = randomNumberCreate();
+                let num2 = randomNumberCreate();
+                arr.push({ "firstNumber": num1, "secondNumber": num2, "sum": num1 + num2 });
+            }
+        }
+
+        function creteQuizEL() {
+            for (let i in arr) {//tonumber or *1 을 하면 문자를 숫자로 인식함
+                text += `<h4> ${i * 1 + 1}번.  ${arr[i].firstNumber} + ${arr[i].secondNumber} = <input type="text" oninput="inputNumberOnly(this)" class="inputValue"><span class="ox">        정답여부</<span></h4>`;
+                document.getElementById("quesition").innerHTML = text;
+
+            }
+        }
+
+        function inputNumberOnly(el) {
+            el.value = el.value.replace(/[^0-9]/g, '');
+        }
+
+        function checkAnswer() {
+            const inputs = document.querySelectorAll('.inputValue');
+            const ox = document.querySelectorAll('.ox');
+
+            for (let k in inputs) {
+                if (inputs[k].value == '') {
+                    alert('빈 값이 있습니다 !');
+                    return;
+                }
+            }
+
+            inputs.forEach(function (input, index) {  //foreach
+                console.log(arr[index].sum);
+                console.log(input.value);
+
+                if (input.value == arr[index].sum) {
+
+                    ox[index].innerText = "정답";
+                    ox[index].classList.add('quesition_O');
+                    ox[index].classList.remove('quesition_X');
+
+                } else {
+                    ox[index].innerText = "오답";
+                    ox[index].classList.add('quesition_X');
+                    ox[index].classList.remove('quesition_O');
+                }
+                let class_cnt_O = document.getElementsByClassName('quesition_O').length;
+                let class_cnt_X = document.getElementsByClassName('quesition_X').length;
+                result = `맞은 개수 : ${class_cnt_O}/${class_cnt_O + class_cnt_X}, 점수 : ${class_cnt_O * 10}점`;
+                document.getElementById("result").innerHTML = result;
+            })
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
