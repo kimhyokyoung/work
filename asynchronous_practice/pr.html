@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비동기통신연습</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <style>
+        body {
+            width: 100%;
+            display: flex;
+        }
+
+        #list {
+            width: 50%;
+
+        }
+
+        #join {
+            width: 50%;
+        }
+
+        p {
+            display: inline-block;
+            width: 120px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="list">
+        <div>
+            <button id="lee">'이'씨만</button>
+            <button id="kim"> '김'씨만</button>
+            <button id="seoul">'서울'거주자만</button>
+            <button id="nameEmail">'이름,이메일주소'만</button>
+            <button id="all">전체</button>
+        </div>
+
+        <div>
+            <form style="display: inline;">
+                <select id="selectBox">
+                    <option value="name">이름</option>
+                    <option value="id">ID</option>
+                </select>
+            </form>
+            <input type="text" id="inputBox" value="검색" style="text-align: center;">
+            <button id="submit">검색</button>
+        </div>
+        <div id="listText"></div>
+    </div>
+    <div id="join">
+        <h3>회원 추가</h3>
+        <div>
+            <p>이름 :</p><input type="text">
+        </div>
+        <div>
+            <p>ID :</p><input type="text">
+        </div>
+        <div>
+            <p>email :</p><input type="text">
+        </div>
+        <div>
+            <p>phone :</p><input type="text">
+        </div>
+        <div>
+            <p>website :</p><input type="text">
+        </div>
+        <div>
+            <p>주소 :</p>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </div>
+        <div>
+            <p>createdAt :</p><input type="text">
+        </div>
+        <div>
+            <p>updatedAt :</p><input type="text">
+        </div>
+        <br>
+        <button id="joinSubmit">작성 </button>
+    </div>
+    <script src="pr.js"></script>
+</body>
+
+</html>
