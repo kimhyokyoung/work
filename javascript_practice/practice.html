@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const user1 = {
+            name: 'kim',
+            age: '32'
+        }
+        const user2 = {
+            name: 'han',
+            age: '18'
+        }
+        const user3 = {
+            name: 'noh',
+            age: '27'
+        } //etc 꼴찌
+
+        const user4 = {
+            name: 'han',
+            age: '18'
+        }
+
+        const teamA = [];
+        teamA.push({
+            name: 'han',
+            age: '18'
+        }, {
+            name: 'han',
+            age: '18'
+        }, {
+            name: 'han',
+            age: '18'
+        });
+
+        teamA.forEach(function (user, index) {
+            console.log(user);
+
+            if (index == 2) {
+                user3.etc = "꼴찌";
+                console.log(user);
+            }
+        })
+    </script>
+</body>
+
+</html>
