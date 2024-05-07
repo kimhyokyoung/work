@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 구구단</title>
+        <style> p {margin: 0;} </style>
+    </head>
+    <body>
+        <div class="container">
+            <button id="change_color">색바꾸기</button>
+            <button id="change_font_bold">글씨 두껍게</button>
+            <button id="delete">삭제</button>
+            <div  id="calculate"></div>
+        </div>
+
+        <script>
+            const color = document.getElementById('change_color');
+            const bold = document.getElementById('change_font_bold');
+            const del = document.getElementById('delete');
+            //const num = document.querySelector('.num');
+
+            cal();
+
+            function cal() {
+            let text = '' ;
+            for(let i=2; i<=9; i++) {
+                for(let j= 1; j<=9; j++) {
+                    //console.log(i);
+                    text += `<p class='num'> ${i} X ${j} = ${i*j} </p>`;
+                    document.getElementById("calculate").innerHTML = text;
+                }
+            }
+        }
+
+
+            color.addEventListener("click", function (event) {
+                const num = document.querySelectorAll('.num');
+                for(var i =0; i<num.length; i++) {
+                    num[i].style.color = 'blue';
+                }
+                console.log(event);
+            })
+
+            bold.addEventListener("click", function (event) {
+                const num = document.querySelectorAll('.num');
+                for(var i =0; i<num.length; i++) {
+                    num[i].style.fontWeight = 'bold';
+                }
+                console.log(event);
+            })
+
+            del.addEventListener("click", function (event) {
+                const num = document.querySelectorAll('.num');
+                for(var i =0; i<num.length; i++) {
+                    num[i].remove();
+                }
+                console.log(event);
+            })
+        
+        </script>
+    </body>
+
+</html>
