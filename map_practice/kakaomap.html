@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapPr</title>
+    <style>
+        .customoverlay {position:relative;bottom:85px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
+        .customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+        .customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #d95050;background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
+        .customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
+        .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+</style>
+</head>
+
+<body>
+    <div id="map" style="width: 900px;height: 700px; border: 1px solid black;"></div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d8b6b04bcb58d2d204b617082b203127"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.62379771584818, 127.0617019244975), //지도의 중심좌표 (위도, 경도) ->현재 기준 광운대역
+            level: 3 //확대/축소 정도
+        };
+        var map = new kakao.maps.Map(container, options);
+/*--------------------------------------------기본 세팅--------------------------------------------*/
+
+        var positions = [
+                {
+                    title: '스타벅스',
+                    latlng: new kakao.maps.LatLng(37.62317874764259, 127.06081502863589),
+                },
+                {
+                    title: '배스킨라빈스',
+                    latlng: new kakao.maps.LatLng(37.62315663905425, 127.06000225596182)
+                },
+                {
+                    title: '뚜레쥬르',
+                    latlng: new kakao.maps.LatLng(37.62285678175547, 127.06054856902793)
+                }
+            ];
+
+
+            for (var i = 0; i < positions.length; i++) {
+
+                    var marker = new kakao.maps.Marker({ //마커를 생성
+                        map: map, // 마커를 표시할 지도
+                        position: positions[i].latlng // 마커의 위치
+                    });
+
+                    var infowindow = new kakao.maps.InfoWindow({ 
+                        content: positions[i].title // 인포윈도우에 표시할 내용
+                    });
+
+                    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow)); //마우스를 가져다대면
+                    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow)); //마우스가 떨어지면
+                }
+
+                function makeOverListener(map, marker, infowindow) {
+                    return function () {
+                        infowindow.open(map, marker,imgMarker);
+                    };
+                }
+
+                function makeOutListener(infowindow) {
+                    return function () {
+                        infowindow.close();
+                    };
+                }
+
+    /*--------------------------------------------이미지 관련--------------------------------------------*/
+        var imageSrc = 'https://i.pinimg.com/564x/7e/e1/50/7ee1504c658888097c7ab61bb90ea159.jpg',
+            imageSize = new kakao.maps.Size(104, 109),
+            imageOption = { offset: new kakao.maps.Point(27, 69) };
+
+        var markerImage = new kakao.maps.MarkerImage(imageSrc,imageSize,imageOption),
+            markerPosition = new kakao.maps.LatLng(37.62400328301881, 127.06055799473329); //위치 -> 회사
+
+        var imgMarker = new kakao.maps.Marker({
+            position:markerPosition,
+            image:markerImage
+        });
+
+        imgMarker.setMap(map);
+
+        var iwContent =  
+        '<div><div> 에스오엑스</div><div>사이트 :<a href="https://www.soxcorp.co.kr/SOXHome/">바로가기</a></div><div>위치 : 서울 노원구 석계로18길 23 </div></div >'
+            iwRemoveable = true;
+
+        var infowindow = new kakao.maps.InfoWindow({
+            content : iwContent,
+            removable: iwRemoveable //닫을 수 잇게 x표시
+        });
+
+        kakao.maps.event.addListener(imgMarker,'click',function(){
+            infowindow.open(map,marker);
+        })
+    </script>
+
+</body>
+
+</html>
