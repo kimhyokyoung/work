@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <section class="header">
+            <div class="header__logo">
+                <img class="header__logo--img" src="./images/main-logo.png">
+            </div>
+            <div class="header__menu">
+                <div class="header__menu--text">
+                    <ul class="header__menu--text__ul">
+                        <li class="header__menu--text__ul">HOME</li>
+                        <li class="header__menu--text__ul">SERVICES</li>
+                        <li class="header__menu--text__ul">PRODUCTS</li>
+                        <li class="header__menu--text__ul">WATCHES</li>
+                        <li class="header__menu--text__ul">SALE</li>
+                        <li class="header__menu--text__ul">BLOG</li>
+                        <li class="header__menu--text__ul">
+                            <select class="header__menu--text__ul__select">
+                                <option>PAGES</option>
+                                <option>ABOUT</option>
+                                <option>BLOG</option>
+                                <option>SHOP</option>
+                                <option>CART</option>
+                                <option>CHECKOUT</option>
+                                <option>SINGLE POST</option>
+                                <option>SINGLE PRODUCT</option>
+                                <option>CONTACT</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__menu--icon">
+                    <ul class="header__menu--icon__ul">
+                        <li class="header__menu--icon__li"><img class="header__menu--icon__li__img "
+                                src="./images/search-icon.png"></li>
+                        <li class="header__menu--icon__li"><img class="header__menu--icon__li__img "
+                                src="./images/user-icon.png"></li>
+                        <li class="header__menu--icon__li"><img class="header__menu--icon__li__img "
+                                src="./images/cart-icon.png"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section>
+            <div class="main--home">
+                <div class="main--home--left">
+                    <div class="main--home--left__title">YOUR PRODUCTS ARE GREAT.</div>
+                    <button class="main--home--left__btn">SHOP PRODUCT</button>
+                </div>
+                <div class="main--home--right">
+                    <img class="main--home--right__img" src="./images/banner-image.png">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="main--services">
+                <div class="main--services--group">
+                    <img class="main--services--group__img" src="./images/services-cart-icon.png">
+                    <div class="main--services--group__text">
+                        <div>FREE DELIVERY</div>
+                        <div>Consectetur adipi elit lorem ipsum dolor sit amet.</div>
+                    </div>
+                </div>
+                <div class="main--services--group">
+                    <img class="main--services--group__img" src="./images/services-guarantee-icon.png">
+                    <div class="main--services--group__text">
+                        <div>QUALITY GUARANTEE</div>
+                        <div>Dolor sit amet orem ipsu mcons ectetur adipi elit.</div>
+                    </div>
+                </div>
+                <div class="main--services--group">
+                    <img class="main--services--group__img" src="./images/services-marker-icon.png">
+                    <div class="main--services--group__text">
+                        <div>DAILY OFFERS</div>
+                        <div>Amet consectetur adipi elit loreme ipsum dolor sit.</div>
+                    </div>
+                </div>
+                <div class="main--services--group">
+                    <img class="main--services--group__img" src="./images/services-protect-icon.png">
+                    <div class="main--services--group__text">
+                        <div>100% SECURE PAYMENT</div>
+                        <div>Rem Lopsum dolor sit amet, consectetur adipi elit.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="main--products">
+                <div class="main--products__text">
+                    <div class="main--products__text--title">MOBILE PRODUCTS</div>
+                    <a class="main--products__text--link" href="#">GO TO SHOP</a>
+                </div>
+                <div class="main--products__info">
+                    <div>
+                        <div class="main--products__info__img"><img class="main--products__info__img--size"
+                                src="./images/product-item1.jpg"></div>
+                        <div class="main--products__info--text">
+                            <div class="main--products__info--text--name">IPHONE 10</div>
+                            <div class="main--products__info--text--price">$980</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main--products__info__img"><img class="main--products__info__img--size"
+                                src="./images/product-item2.jpg"></div>
+                        <div class="main--products__info--text">
+                            <div class="main--products__info--text--name">IPHONE 11</div>
+                            <div class="main--products__info--text--price">$1100</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main--products__info__img"><img class="main--products__info__img--size"
+                                src="./images/product-item3.jpg"></div>
+                        <div class="main--products__info--text">
+                            <div class="main--products__info--text--name">IPHONE 8</div>
+                            <div class="main--products__info--text--price">$780</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main--products__info__img"><img class="main--products__info__img--size"
+                                src="./images/product-item4.jpg"></div>
+                        <div class="main--products__info--text">
+                            <div class="main--products__info--text--name">IPHONE 13</div>
+                            <div class="main--products__info--text--price">$1500</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="main--watches">
+                <div class="main--watches__text">
+                    <div class="main--watches__text--title">SMART WATCHES</div>
+                    <a class="main--watches__text--link" href="#">GO TO SHOP</a>
+                </div>
+                <div class="main--watches__info">
+                    <div>
+                        <div class="main--watches__info__img"><img class="main--watches__info__img--size"
+                                src="./images/singel-product-item.jpg"></div>
+                        <div class="main--watches__info--text">
+                            <div class="main--watches__info--text--name">PINK WATCH</div>
+                            <div class="main--watches__info--text--price">$870</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main--watches__info__img"><img class="main--watches__info__img--size"
+                                src="./images/product-item7.jpg"></div>
+                        <div class="main--watches__info--text">
+                            <div class="main--watches__info--text--name">HEAVY WATCH</div>
+                            <div class="main--watches__info--text--price">$680</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main--watches__info__img"><img class="main--watches__info__img--size"
+                                src="./images/product-item8.jpg"></div>
+                        <div class="main--watches__info--text">
+                            <div class="main--watches__info--text--name">SPOTTED WATCH</div>
+                            <div class="main--watches__info--text--price">$750</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="main--watches__info__img"><img class="main--watches__info__img--size"
+                                src="./images/product-item9.jpg"></div>
+                        <div class="main--watches__info--text">
+                            <div class="main--watches__info--text--name">BLACK WATCH</div>
+                            <div class="main--watches__info--text--price">$650</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="main--sale">
+                    <div class="main--sale__text">
+                        <div class="main--sale__text--sale">10% off</div>
+                        <div class="main--sale__text--title">NEW YEAR SALE</div>
+                        <button class="main--sale__btn">SHOP SALE</button>
+                    </div>
+                    <img src="./images/single-image1.png" class="main--sale__img">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="main--blog">
+                <div class="main--blog__text">
+                    <div class="main--blog__text--title">LATEST POSTS</div>
+                    <a class="main--blog__text--link" href="#">READ BLOG</a>
+                </div>
+                <div class="main--blog__info">
+                    <div>
+                        <img src="./images/post-item1.jpg" class="main--blog__info__img">
+                        <div class="main--blog__info--text">
+                            <div class="main--blog__info--text--date">FEB 22, 2023 - GADGETS</div>
+                            <div class="main--blog__info--text--title">GET SOME COOL GADGETS IN 2023</div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./images/post-item2.jpg" class="main--blog__info__img">
+                        <div class="main--blog__info--text">
+                            <div class="main--blog__info--text--date">FEB 25, 2023 - TECHNOLOGY</div>
+                            <div class="main--blog__info--text--title">TECHNOLOGY HACK YOU WON'T GET</div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./images/post-item3.jpg" class="main--blog__info__img">
+                        <div class="main--blog__info--text">
+                            <div class="main--blog__info--text--date">FEB 22, 2023 - CAMERA</div>
+                            <div class="main--blog__info--text--title">TOP 10 SMALL CAMERA IN THE WORLD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="main--review">
+                <img class="main--review__img" src="./images/double_quotes.png">
+                <div>
+                    <div class="main--review__text">"Tempus oncu enim pellen tesque este pretium in reque, elit morbi
+                        sagittis lorem habi matties Pellen tesque pretium feugiat vel morbi suspen dise sagittis lorem
+                        habi tasse morbi."</div>
+                    <div class="main--review__star"><img src="./images/review_star.png" class="main--review__"></div>
+                    <div class="main--review__writer">EMMA CHAMBERLIN</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="main--subscribe">
+                <div class="main--subscribe__text">
+                    <div class="main--subscribe__text--title">SUBSCRIBE US NOW</div>
+                    <div class="main--subscribe__text--content">Get latest news, updates and deals directly mailed
+                        to
+                        your inbox.</div>
+                </div>
+                <div class="main--subscribe__text--email">
+                    <input type="text" value="Your email address here" class="main--subscribe__text--email__inputbox">
+                    <button class="main--subscribe__text--email__btn">SUBSCRIBE</button>
+                </div>
+        </section>
+
+        <section>
+            <div class="main--insta">
+                <div class="main--insta--title">SHOP OUR INSTA</div>
+                <div class="main--insta--img--group">
+                    <img class="main--insta--img" src="./images/insta-item1.jpg">
+                    <img class="main--insta--img" src="./images/insta-item2.jpg">
+                    <img class="main--insta--img" src="./images/insta-item3.jpg">
+                    <img class="main--insta--img" src="./images/insta-item4.jpg">
+                    <img class="main--insta--img" src="./images/insta-item5.jpg">
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="main--bottomMenu">
+                <div class="main--bottomMenu--explanation">
+                    <div class="main--bottomMenu--explanation--title">MiniStore</div>
+                    <div>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean
+                        odio
+                        erat nullam fringilla.</div>
+                    <div class="main--bottomMenu--explanation--img">
+                        <img src="./images/facebook_icon.png">
+                        <img src="./images/insta_icon.png">
+                        <img src="./images/twitter_icon.png">
+                        <img src="./images/in_icon.png">
+                        <img src="./images/youtube_icon.png">
+                    </div>
+                </div>
+                <div class="main--bottomMenu--link">
+                    <div class="main--bottomMenu--link--title">QUICK LINKS</div>
+                    <div>
+                        <div>HOME</div>
+                        <div>ABOUT</div>
+                        <div>SHOP</div>
+                        <div>BLOGS</div>
+                        <div>CONTACT</div>
+                    </div>
+                </div>
+                <div class="main--bottomMenu--help">
+                    <div class="main--bottomMenu--help--title">HELP & INFO HELP</div>
+                    <div>
+                        <div>TRACK YOUR ORDER</div>
+                        <div>RETURNS POLICIES</div>
+                        <div>SHIPPING + DELIVERY</div>
+                        <div>CONTACT US</div>
+                        <div>FAQS</div>
+                    </div>
+                </div>
+                <div class="main--bottomMenu--contact">
+                    <div class="main--bottomMenu--contact--title">CONTACT US</div>
+                    <div>
+                        <div>Do you have any queries or suggestion? yourinfo@gmail.com</div>
+                        <div>If you need support? Just give us a call. +55 111 222 333 44</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <div class="footer">
+                <div class="footer-left">We ship with:
+                    <img src="./images/dhl.png">
+                    <img src="./images/shippingcard.png">
+                </div>
+                <div class="footer-center">Payment options:
+                    <img src="./images/visa.jpg">
+                    <img src="./images/mastercard.jpg">
+                    <img src="./images/paypal.jpg">
+                </div>
+                <div class="footer-right">© Copyright 2023 MiniStore. Design by <a href="#">Templates Jungle</a>
+                    Distribution by
+                    <a href="#">ThemeWagon</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
+<!--https://themewagon.github.io/MiniStore/#smart-watches-->
