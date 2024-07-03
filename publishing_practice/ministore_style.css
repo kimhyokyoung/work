@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ol,ul {
+    list-style: none;
+}
+.header {
+    width: 100%;
+    min-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: #F8F9FA;
+    position: fixed;
+    z-index: 10;
+    padding: 1em 2em;
+}
+
+.header__logo{
+    
+}
+
+.header__logo--img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.header__menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__menu--text{
+    display: flex;
+}
+
+
+.header__menu--text__ul {
+    margin-right: 1em;
+    display: flex;
+    list-style: none;
+}
+
+.header__menu--icon__ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.header__menu--icon__li{
+    width: 20px;
+    /* height: 20px; */
+    margin-right: 10px;
+    /* height: 30px; */
+}
+
+.header__menu--icon__li__img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.header__menu--text__ul__select{
+    border: 0;
+    background-color: transparent;
+    width: 70px;
+}
+
+.main--home{
+    width: 100%;
+    background-color: #F2F2F2;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main--home--left{
+    display: flex;
+    flex-direction: column;
+    width: 650px
+}
+
+.main--home--left__title{
+    font-size: 70px;
+}
+
+.main--home--right, .main--home--right__img{
+    height: 100%;
+}
+
+
+.main--services{
+    display: flex;
+    flex-direction: row;
+    padding: 7em 20em;
+}
+
+.main--services--group{
+    display: flex;
+    flex-direction: row;
+}
+
+.main--services--group__img{
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+    object-fit: contain;
+}
+
+.main--services--group__text :nth-child(1){
+    font-size: 1.2em;
+}
+
+.main--services--group__text :nth-child(2) {
+    font-size: 1em;
+    color: lightgrey;
+}
+
+.main--products, .main--watches{
+    padding: 0 20em 7em 20em;
+}
+
+.main--blog{
+    padding: 4em 20em;
+}
+
+.main--products__text, .main--watches__text, .main--blog__text{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+}
+
+
+.main--products__text--title, .main--watches__text--title, .main--blog__text--title{
+    font-size: 2em;
+}
+
+.main--products__text--link, .main--watches__text--link, .main--blog__text--link {
+    text-decoration: underline;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.main--products__info, .main--watches__info, .main--blog__info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main--watches__info__img, .main--products__info__img{
+    width: 300px;
+    height: 350px;
+}
+
+.main--blog__info__img {
+    width: 350px;
+    height: 300px;
+}
+
+.main--watches__info__img--size, .main--products__info__img--size{
+    width: 100%;
+    height: 100%;
+}
+
+.main--products__info--text, .main--watches__info--text{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5em;
+}
+
+.main--blog__info--text{
+    display: flex;
+    flex-direction: column;
+}
+
+.main--blog__info--text--date{
+    font-size: small;
+    color: darkgray;
+}
+.main--blog__info--text--title{
+    font-weight: 600;
+}
+
+
+.main--products__info--text--name, .main--watches__info--text--name{
+    font-size: large;
+    font-weight: 600;
+}
+
+.main--products__info--text--price, .main--watches__info--text--price{
+    font-size: large;
+    font-weight: 600;
+    color: #85B9CF;
+}
+
+.main--sale {
+    width: 100%;
+    background-color: #F0F2F2;
+    height: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main--home--left__btn, .main--sale__btn{
+    width: 186px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 1.1em;
+    margin-top: 2em;
+}
+
+.main--sale__text{
+    margin-right: 500px;
+    margin-top: 200px;
+}
+
+.main--sale__img{
+    height: 100%;
+}
+
+.main--sale__text--sale{
+    font-size: 2em;
+}
+
+.main--sale__text--title{
+    font-size: 4em;
+}
+
+.main--review{
+    width: 100%;
+    padding: 0 20em 7em 20em;
+    display: flex;
+    flex-direction: column;
+}
+
+.main--review__img{
+    width: 120px;
+    margin: 0 auto;
+}
+
+.main--review__text{
+    font-size: 2em;
+    text-align: center;
+    margin: 1em;
+}
+
+.main--review__star{
+    display: flex;
+    justify-content: center;
+}
+
+.main--review__writer{
+    font-size: 1em;
+    text-align: center;
+}
+
+.main--subscribe{
+    width: 100%;
+    padding: 0 20em 7em 20em;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(36, 36, 36);
+    justify-content: space-between;
+}
+
+.main--subscribe__text{
+    display: flex;
+    flex-direction: column;
+}
+
+.main--subscribe__text--title{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.main--subscribe__text--content{
+    color: lightgray;
+    font-size: 15px;
+}
+
+.main--subscribe__text--email{
+    /* display: flex; */
+}
+
+.main--subscribe__text--email__inputbox{
+    background-color: white;
+    border: 0;
+}
+
+.main--subscribe__text--email__btn{
+    background-color: #72AEC8;
+    color: white;
+    border: 0;
+}
+
+.main--insta {
+    width: 100%;
+    padding: 4em 20em 7em 20em;
+}
+
+.main--insta--title{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main--insta--img--group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main--insta--img{
+    width: 240px;
+    height: 300px;
+}
+
+.main--bottomMenu{
+    width: 100%;
+    padding: 4em 20em 7em 20em;
+    display: flex;
+}
+
+.main--bottomMenu--explanation, .main--bottomMenu--help, .main--bottomMenu--contact{
+    flex: 2;
+    /* margin-right: 5px; */
+}
+
+.main--bottomMenu--link{
+    flex: 1.2;
+}
+
+.main--bottomMenu--explanation--title{
+    font-size: 30px;
+}
+
+.main--bottomMenu--link--title, .main--bottomMenu--help--title, .main--bottomMenu--contact--title {
+    font-size: 20px;   
+}
+
+.main--bottomMenu--explanation--img{
+    margin-right: 5px;
+}
+
+.footer {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    display: flex;
+    padding: 1em 20em;
+}
+
+.footer-left{
+    flex: 1;
+    color: #ccc;
+}
+
+.footer-center{
+    flex: 1;
+    color: #ccc;
+}
+
+.footer-right {
+    flex: 1;
+    color: #ccc;
+}
